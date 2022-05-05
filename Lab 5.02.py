@@ -38,13 +38,41 @@ from the Standard to Duane Reade. Ariana Grande was walking rather quickly becau
 New York for a few months. All of a sudden a slimy donut appeared out of nowhere. Ariana Grande decided 
 to prance foolishly instead of dealing with the situation. Thrown off from Duane Reade Ariana Grande 
 decides to go to Times Square instead. What a beautiful day in New York."
-​
+
 #make all letters lowercase
 example_paragraph_lower = example_paragraph.lower()
-​
+
 #remove all periods
 example_paragraph_lower_no_punctuation = example_paragraph_lower.replace(".", "")
-​
+
 #convert paragraph into a list of individual strings
 example_word_list = example_paragraph_lower_no_punctuation.split(" ")
 '''
+
+
+
+paragraph = "The sun is shining. It is a sunny day. There is no more rain. The birds are outside"
+dictionary = {}
+paragraph = paragraph.lower()
+paragraph = paragraph.replace(".", "")
+paragraph = paragraph.split()
+for word in paragraph:
+    if word in dictionary:
+            dictionary[word] += 1
+    else:
+        dictionary[word] = 1
+def word_frequency():
+    user_word = ''
+    while user_word != 'quit':
+        user_word = input("What word would you like to know the frequency of? ")
+        if user_word in dictionary:
+            print(f"'{user_word}' occurs {dictionary[user_word]} times")
+        else:
+            print(f"{user_word} does not occur")
+word_frequency()
+
+
+
+
+
+
