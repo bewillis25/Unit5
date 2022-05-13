@@ -34,8 +34,7 @@ weekend_dates = {
   'April 2018': [7, 8, 14, 15, 21, 22, 28, 29],
   'May 2018': [5, 6, 12, 13, 19, 20, 26, 27]
 }
-a = weekend_dates['May 2018']
-a.append(28)
+weekend_dates['May 2018'].append(28)
 print(weekend_dates)
 
 
