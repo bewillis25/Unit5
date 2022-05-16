@@ -75,3 +75,88 @@ most frequent to least frequent.
 
 Change the code to find the least frequent words.
 '''
+
+story = 'I am Sam. I am Sam. Sam-I-am. That Sam-I-am! That Sam-I-am! I do not like that Sam-I-am! Would you like green eggs and ham? I do not like them, Sam-I-am. I do not like green eggs and ham. Would you like them here or there? I would not like them here or there. I would not like them anywhere. I do not like green eggs and ham. I do not like them, Sam-I-am. Would you like them in a house? Would you like them with a mouse? I do not like them in a house. I do not like them with a mouse. I do not like them here or there. I do not like them anywhere. I do not like green eggs and ham. I do not like them, Sam-I-am.'
+
+# Original Version
+def text_to_word_list(string):
+    string = string.lower()
+    string = string.replace(".", "")
+    string = string.replace("?", "")
+    string = string.split()
+    return string
+def count_frequencies(list):
+    dictionary = {}
+    for word in list:
+        if word in dictionary:
+                dictionary[word] += 1
+        else:
+            dictionary[word] = 1
+    return dictionary
+def find_max_valued_key(dict):
+    # Looked up how to use max on lists
+    a = sorted(dict, key = dict.get, reverse=True)
+    for i in range(0,5):
+        print(a[i],dict[a[i]])
+find_max_valued_key(count_frequencies(text_to_word_list(story)))
+
+
+# Bonus Version printing all words frequency
+def text_to_word_list(string):
+    string = string.lower()
+    string = string.replace(".", "")
+    string = string.replace("?", "")
+    string = string.split()
+    return string
+def count_frequencies(list):
+    dictionary = {}
+    for word in list:
+        if word in dictionary:
+                dictionary[word] += 1
+        else:
+            dictionary[word] = 1
+    return dictionary
+def find_max_valued_key(dict):
+    # Looked up how to use max on lists
+    a = sorted(dict, key = dict.get, reverse=True)
+    for i in range(0,len(a)):
+        print(a[i],dict[a[i]])
+find_max_valued_key(count_frequencies(text_to_word_list(story)))
+
+
+# Bonus version with 5 least frequent words
+def text_to_word_list(string):
+    string = string.lower()
+    string = string.replace(".", "")
+    string = string.replace("?", "")
+    string = string.split()
+    return string
+def count_frequencies(list):
+    dictionary = {}
+    for word in list:
+        if word in dictionary:
+                dictionary[word] += 1
+        else:
+            dictionary[word] = 1
+    return dictionary
+def find_max_valued_key(dict):
+    # Looked up how to use max on lists
+    a = sorted(dict, key = dict.get, reverse=True)
+    for i in range(len(a))[len(a)-6:-1]:
+        print(a[i],dict[a[i]])
+find_max_valued_key(count_frequencies(text_to_word_list(story)))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
